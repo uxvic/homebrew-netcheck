@@ -6,17 +6,18 @@ A menu bar internet reachability + live throughput monitor. [Source repo →](ht
 
 ```sh
 brew tap uxvic/netcheck
-brew install --cask --no-quarantine netcheck
+brew install --cask netcheck
 ```
 
 On recent Homebrew, if it refuses the tap as "untrusted", run `brew trust uxvic/netcheck` first.
 
-`--no-quarantine` skips Gatekeeper. NetCheck isn't notarized (no paid Apple Developer
-account), so without that flag macOS shows a one-time "Open Anyway" prompt under
-**System Settings → Privacy & Security**. Integrity and updates are handled by Sparkle's
-own signature, not Apple's.
+NetCheck isn't notarized (no paid Apple Developer account), so the **first launch** shows a
+one-time Gatekeeper prompt — open **System Settings → Privacy & Security → Open Anyway**. This
+applies to Homebrew and the direct `.dmg` alike. After that, updates are automatic and silent via
+Sparkle (it strips the quarantine flag). Power users can skip the prompt with
+`xattr -dr com.apple.quarantine /Applications/NetCheck.app`.
 
-Prefer not to use Homebrew? Just download the `.dmg` from
+Prefer not to use Homebrew? Download the `.dmg` from
 [Releases](https://github.com/uxvic/NetCheck/releases/latest), drag it to Applications,
 and do the one-time **Open Anyway**.
 
