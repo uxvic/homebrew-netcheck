@@ -12,8 +12,8 @@ cask "netcheck" do
     strategy :sparkle
   end
 
-  auto_updates true                  # app self-updates via Sparkle
-  depends_on macos: ">= :sonoma"     # macOS 14+
+  auto_updates true        # app self-updates via Sparkle
+  depends_on macos: :sonoma  # macOS 14+ (minimum)
 
   app "NetCheck.app"
 
