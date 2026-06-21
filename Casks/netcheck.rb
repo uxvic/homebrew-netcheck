@@ -13,7 +13,7 @@ cask "netcheck" do
   end
 
   auto_updates true        # app self-updates via Sparkle
-  depends_on macos: :sonoma  # macOS 14+ (minimum)
+  depends_on macos: ">= :sonoma"  # macOS 14+ (minimum) — bare :sonoma means EXACTLY 14 and blocks 15/26+
 
   app "NetCheck.app"
 
