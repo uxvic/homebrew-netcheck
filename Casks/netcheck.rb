@@ -1,6 +1,6 @@
 cask "netcheck" do
-  version "1.0.4"
-  sha256 "12aa686fd8efdbc72094fe5c3e41d892f7a3d5ae6153c1f0e02f8afef8e35e88"
+  version "1.0.5"
+  sha256 "d296a020b2d5999f7ea2ac63666a7d8a4368c57acc657f4229d9286f70863c89"
 
   url "https://github.com/uxvic/NetCheck/releases/download/v#{version}/NetCheck-#{version}.dmg"
   name "NetCheck"
